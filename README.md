@@ -2,10 +2,10 @@
 A horror-themed platformer originally developed during the 2013 [Global Game Jam](https://globalgamejam.org).  
 
 Play this project:  
-http://johtull.com/existential-dread
+https://johtull.com/existential-dread/index.html
 
 Original 2013 Global Game Jam Entry:  
-http://johtull.com/existential-dread/download/Existential+Dread+v1.2+-+GGJ+2013.jar
+https://johtull.com/existential-dread/download/Existential+Dread+v1.2+-+GGJ+2013.jar
 
 # Purpose
 The primary purpose of this port is preservation amidst the aging technology it was originally built with (Java 1.7). Rewritten entirely in vanilla JavaScript for HTML5 canvas, we have improved the core gameplay mechanics while retaining the initial inspiration.
