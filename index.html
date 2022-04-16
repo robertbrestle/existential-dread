@@ -1,0 +1,50 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title>Existential Dread</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="shortcut icon" href="img/tiles/battery.png">
+</head>
+<body>
+	<div class="container">
+		<canvas id="canvas" width="640" height="480"></canvas>
+		
+		<div id="start" class="">
+			<button onclick="init()">START</button>
+		</div>
+		
+		<div id="title" class="hidden">
+			<div class="menu">
+				<ul>
+					<li><button class="green" onclick="resetGame()">Play Original</button></li>
+					<li><button onclick="renderTitle('story')">Story</button></li>
+					<li><button onclick="renderTitle('instructions')">Instructions</button></li>
+					<li><button onclick="renderTitle('credits')">Credits</button></li>
+					<li><button id="togglesound" class="green" onclick="toggleSounds()">Toggle Sounds</button></li>
+				</ul>
+			</div>
+		</div>
+		<div id="back" class="hidden">
+			<button onclick="renderTitle('title')">Back</button>
+		</div>
+		<div id="gameover" class="hidden">
+			<button onclick="renderMainTitle()">Back</button>
+		</div>
+	</div>
+	
+	<br>
+	<p id="player"></p>
+	<p id="map"></p>
+	<br>
+	
+	<br>
+	
+	<a href="https://github.com/robertbrestle/existential-dread" target="_blank">View the source on GitHub</a>
+	<!--
+	<a href="https://s3.us-east-2.amazonaws.com/johtull.com/ed/Existential+Dread+v1.2+-+GGJ+2013.jar" target="_blank">Click here to download the original GGJ 2013 entry!</a>
+	-->
+	<script type="text/javascript" src="js/LoadMap.js"></script>
+	<script type="text/javascript" src="js/Objects.js"></script>
+	<script type="text/javascript" src="js/Game.js"></script>
+</body>
+</html>

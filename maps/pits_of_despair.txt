@@ -1,0 +1,27 @@
+b={"img":"city_border"}
+C={"img":"city_block"}
+<={"sizeY":16,"img":"city_block_half","offsetY":16}
+~={"isSolid":false,"type":"battery","img":"battery"}
+#={"isSolid":false,"type":"door","img":"red_door"}
+F={"sizeY":16,"isSolid":false,"type":"jump","img":"trampoline","offsetY":16}
+MAP={"width":104,"height":18,"nextMap":"maps/pacer.txt","music":"hopeless","batteryDrain":0.5}
+DARKNESS={"id":0,"x1":0,"y1":0,"x2":3328,"y2":576,"dir":"right","condType":"time","cond":"0","speed":0,"damage":2}
+START
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+b              C                                  C                  ~                            C    b
+b     CCCCCC   C    CCCCCCCCC             C       C               CCCCCCC  CCCC        CCCCCCCCCCCC  < b
+b         ~C   C          ~ CCCC    CCCCCCC       C                    C  CC           C          C  C b
+bCCCCCCCCCCC   C            C             C                  F         C  CC           C             C#b
+b                   CCC     C             C              CCCCCC  C     CCC    CCCCCCCCCC          CCCCCb
+b   CCCCCCCCCCCC                 CCCCCCCCCCC         CCCCC   <   C            C                       ~b
+b   C              CCCCCCCCCCCCCCC        ~C      CCCCC     <    CCCCCC       C   CCCCCCCCCCCCCCCCCCCCCb
+b ~ C    C                             CCCCC    F            <   C    C       ~                        b
+bCCCC    C    CC  CC                          CCCC          <    C    C       C                   C    b
+b        C   C     C              CCCCC       C  C       CCCCC   C    C       C  CCCCCCCCC  CCCCCCC    b
+b        C  CCC    CCCCCCCC                   C  C           C   C    C    CCCCCCC                C    b
+bCCCCCCCCC  C      C                          C  C           C   C C          C              CCCCC     b
+b           C       CCC           CCC      CCCC  CCCC     CCCCCCCC C          C                   C    b
+b        CCCC      C            C C C      C~      CC     C        C    F     C                   C    b
+b          ~C       C           C   C      CC          CCCCCCCC    CCCCCCCC   C    CCCCCC         C    b
+b    S      CF     CCCC     F   CCCCC          FF  CC     C                   C    C      FF    ~ C    b
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb

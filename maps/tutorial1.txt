@@ -1,0 +1,33 @@
+B={"sizeX":32,"sizeY":32,"offsetX":0,"offsetY":0,"isSolid":true,"type":"","img":"subway_block"}
+a={"sizeX":32,"sizeY":32,"offsetX":0,"offsetY":0,"isSolid":false,"type":"","img":"factory_floor"}
+b={"sizeX":32,"sizeY":16,"offsetX":0,"offsetY":16,"isSolid":true,"type":"","img":"subway_block_half"}
+X={"sizeX":32,"sizeY":32,"offsetX":0,"offsetY":0,"isSolid":false,"type":"door","img":"red_door"}
+T={"sizeX":32,"sizeY":16,"offsetX":0,"offsetY":16,"isSolid":false,"type":"jump","img":"trampoline"}
+H={"sizeX":32,"sizeY":32,"offsetX":0,"offsetY":0,"isSolid":false,"type":"","img":"subway_block"}
+~={"sizeX":32,"sizeY":32,"offsetX":0,"offsetY":0,"isSolid":false,"type":"battery","img":"battery"}
+c={"sizeX":32,"sizeY":16,"offsetX":0,"offsetY":0,"isSolid":true,"type":"","img":"subway_block_half"}
+MAP={"width":64,"height":24,"cameraX":"","cameraY":"","nextMap":"","music":"none","bgImg":"","bgImgWidth":0,"bgImgHeight":0,"bgColor":"#000","overlayColor":"#F00","overlayAlpha":"0","batteryDrain":1,"condType":"","cond":""}
+START
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+B                                                              B
+B                                                              B
+B                                                              B
+B                                                              B
+B                                                              B
+B X                                                            B
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB               BBBBBB       B
+BBBBBc                          BBBBBB            BBBBBBB     BB
+BBBc                            BBBBBB            BBBBBBB      B
+Bc                              BBBBBB            BBBBBBB     BB
+B                               BBBBBB            BBBBBBB      B
+B                               BBBBBB  T         BBBBBBB     BB
+B                               BB   H  B         BBBBBBB      B
+B    aaa                        BB ~ B            BBBBBBBb     B
+B      a    BB         BBb      BB   Bb       T  bBBBBBBB      B
+B    a a   BBB         BBBBb     BBBBBBBBBBBBBBBBBBBBBBBB      B
+B   a     BBBB         BBBBBBb     BBBBBBBBBBBBBBBBBBBBBBb     B
+B  a     BBBBB         BBBBBBBBb     BBBBBBBBBBBBBBBBBBBB      B
+B       BBBBBB         BBBBBBBBBBb                            BB
+B      BBBBBBB         BBBBBBBBBBBBb                           B
+B S                    BBBBBBBBBBBBBBb                        bB
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB

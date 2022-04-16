@@ -1,0 +1,110 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Courier New", Courier, monospace;
+	color: white;
+}
+html {
+	background-color: #000;
+}
+body {
+	text-align: center;
+}
+.container {
+	display: inline-block;
+	position: relative;
+	margin: 20px auto;
+}
+canvas {
+	display: block;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+textarea {
+	width: 640px;
+	color: black;
+	min-height: 200px;
+}
+#title {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#title .menu {
+	position: relative;
+    /*top: 50%;*/
+    transform: translateY(50%);
+}
+#back,
+#gameover {
+	position: absolute;
+	bottom: 0;
+	left: 64px;
+}
+button {
+	margin: 5px;
+	padding: 4px;
+	color: white;
+	background-color: blue;
+	border: 1px solid white;
+	border-radius: 4px;
+	width: 120px;
+}
+button.red { background-color: darkred; }
+button.green { background-color: darkgreen; }
+button.purple { background-color: purple; }
+ul {
+	list-style: none;
+}
+a {
+	color: gray;
+}
+.hidden {
+	display: none;
+}
+.block {
+	display: block;
+}
+input, textarea, select, option {
+	color: black;
+}
+/*
+#editor .editor-tile input,
+#editor .editor-darkness input.number,
+#editor-map-object input.number {
+	width: 20px;
+}
+#editor input.number4 {
+	width: 40px;
+}
+#editor .editor-tile .tile-image {
+	width: auto;
+}
+#editor .editor-tile .tile-preview {
+	width: 32px;
+	height: 32px;
+	/*background-image: url('/img/tiles/tile_spritesheet.png');*
+	background-image: url('/existential-dread-extended/img/tiles/tile_spritesheet.png');
+}
+
+/* tooltips *
+#editor .editor-tile > div:hover .tooltip,
+#editor .editor-darkness > div:hover .tooltip,
+#editor #editor-map-object > div:hover .tooltip {
+	display: block;
+}
+#editor .editor-tile > div,
+#editor .editor-darkness > div,
+#editor #editor-map-object > div {
+	display: inline-block;
+}
+#editor .tooltip {
+	display: none;
+	background: white;
+	color: black;
+	border: 2px solid black;
+	position: absolute;
+	padding: 5px;
+}*/

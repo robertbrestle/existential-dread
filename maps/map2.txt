@@ -1,0 +1,77 @@
+%={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":true,"type":"","img":"subway_border"}
+E={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":true,"type":"","img":"subway_block"}
+e={"x":0,"y":0,"sizeX":32,"sizeY":16,"isSolid":true,"type":"","img":"subway_block_half"}
+&={"x":0,"y":0,"sizeX":32,"sizeY":16,"isSolid":true,"type":"","img":"subway_block_half","offsetY":16}
+~={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":false,"type":"battery","img":"battery"}
+F={"x":0,"y":0,"sizeX":32,"sizeY":16,"isSolid":false,"type":"jump","img":"trampoline","offsetY":16}
+#={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":false,"type":"door","img":"red_door"}
+MAP={"width":64,"height":64,"nextMap":"maps/map3.txt","bgImg":"img/bgs/level_2.png","bgImgWidth":2048,"bgImgHeight":2048,"music":"fear_rising","batteryDrain":1}
+DARKNESS={"id":0,"x1":0,"y1":2048,"x2":2048,"y2":2048,"dir":"up","condType":"time","cond":"0","speed":0.1,"damage":1}
+DARKNESS={"id":0,"condType":"time","cond":"4000","speed":0.5}
+DARKNESS={"id":1,"x1":0,"y1":0,"x2":0,"y2":2048,"dir":"right","condType":"time","cond":"4000","speed":0.25,"damage":1}
+DARKNESS={"id":2,"x1":2048,"y1":0,"x2":2048,"y2":2048,"dir":"left","condType":"time","cond":"4000","speed":0.25,"damage":1}
+START
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    ~                     ~                                & ~%
+%   EE        EEEEEEEEEEEEEEEEEEEEEEEEEEEEEE              EEEE %
+%            FE                             E            E     %
+%            EE        e                     E          E      %
+%E            E         E          E                           %
+%E     E                E        EEEEEE             E          %
+%      EF       EFFE    E          E     F                     %
+%      EE       eEEe    E    #     E     EEE                   %
+%     EE                EEEEEEEEEEEE                        ~  %
+%                                                          EEEE%
+%                                                E FF E        %
+%   F                      EEEEEEEEEEEEEE        eEEEEe        %
+%   E         E    E                                           %
+%   E                   E                                      %
+%F                ~         EEEEEEE     E                      %
+%E                E        E           E     EEEEEE            %
+%EEEEE               E     E   EEEEEEEE   Ee                   %
+%              E           E             Ee       EEEEEE       %
+%                        EEE           EEe                 EE  %
+%           E              EE   ~   eEEEE                EEE   %
+%  EEEEEEEEEEEEEEEEEEEEE   EEEEEEEEEE    E             EEE     %
+%            E                  EEEEEEEEEEE                    %
+%            EEEEE     EEEEE                 &E              EE%
+%            E                              &E     EEEE        %
+%EEEEEE    EEEEEEEEEEEEEEEEEEEEE   EEEEEEEEEEEEEEEEEEEEEEEEEEEE%
+%                                                              %
+%                                E                   ~         %
+%EEEEEEEEEEE   EEEEEEEEEEEE      EEEEEEEEEEEEEEEEEEEEEEEEEEEEEE%
+%                                                              %
+%                                E                             %
+%EEEEEEEEEEEEEEEEEEEEEE    EEEEEEEEEEEEEEEE   EEEEEEEE    EEEEE%
+%             E                               E                %
+%                E       ~                    E     &  F       %
+%   EEEEEEEE     EE    EEEEEEEEEEEEEEE   EEEEEE      EEEEEE    %
+%                E                            E      E         %
+%EE            EEE                            E      E         %
+% E              E  EEE      EEE              E      E     ~   %
+% EEEE           E   E        E       EEE     E      E     EFFE%
+%                E                     E      EEE    E     EEEE%
+%           F    E     EEE                    E      E         %
+%          EE    E      E       EEE           E    EEE         %
+%                E               E            E      E         %
+%    F           E                      EEE   EEE    E         %
+%   EE           E                       E    E      E  EFFE   %
+%                E           EEE              E    EEE  EEEE   %
+%                E  EEE                       E      E         %
+%                E   E                        E      E         %
+%F              FE                   EEE      E      E        F%
+%EEE          EEEEEEEEE            EEEEEEEEEEEEEEE       EEEEEE%
+%       EE             EEEE    EEEE                  EE        %
+%       EE                                           EE        %
+%       EE                                           EE        %
+%       EE                                           EE        %
+%       EE                                           EE        %
+%     FFEEFF                 F                     FFEEFF      %
+%   EEEEeeEEEE              &E&                  EEEEeeEEEE    %
+%       &&                  E E                      &&        %
+%       EE                 e E e                     EE        %
+%E      EE               &e  E  e&                   EE       E%
+%EEEEE      EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE      EEEEEE%
+%                                                              %
+%       ~                    S                        ~        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

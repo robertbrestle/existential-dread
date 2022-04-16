@@ -1,0 +1,43 @@
+B={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":true,"type":"","img":"factory_border"}
+D={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":true,"type":"","img":"factory_floor"}
+~={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":false,"type":"battery","img":"battery"}
+MAP={"width":64,"height":18,"nextMap":"","bgImg":"img/bgs/level_3.png","bgImgWidth":2048,"bgImgHeight":576,"music":"dreams_into_darkness","condType":"countdown","cond":90000,"batteryDrain":1}
+DARKNESS={"id":0,"x1":0,"y1":0,"x2":0,"y2":576,"dir":"right","condType":"time","cond":"2000","speed":1.33,"damage":1}
+DARKNESS={"id":1,"x1":0,"y1":576,"x2":2048,"y2":576,"dir":"up","condType":"time","cond":"2000","speed":0.25,"damage":1}
+DARKNESS={"id":0,"condType":"time","cond":"20000","speed":-1.33}
+DARKNESS={"id":1,"condType":"time","cond":"20000","speed":-0.5}
+DARKNESS={"id":2,"x1":2048,"y1":0,"x2":2048,"y2":576,"dir":"left","condType":"time","cond":"20000","speed":1,"damage":1}
+DARKNESS={"id":3,"x1":0,"y1":0,"x2":2048,"y2":0,"dir":"down","condType":"time","cond":"20000","speed":0.20,"damage":1}
+DARKNESS={"id":1,"condType":"time","cond":"26000","speed":0}
+DARKNESS={"id":0,"condType":"time","cond":"35000","speed":0}
+DARKNESS={"id":2,"condType":"time","cond":"46000","speed":-4}
+DARKNESS={"id":1,"condType":"time","cond":"46000","speed":-2}
+DARKNESS={"id":3,"condType":"time","cond":"46000","speed":-2}
+DARKNESS={"id":0,"condType":"time","cond":"51000","speed":3}
+DARKNESS={"id":3,"x1":0,"y1":0,"x2":2048,"y2":0,"condType":"time","cond":"55000","speed":0.5}
+DARKNESS={"id":0,"condType":"time","cond":"59000","speed":0.10}
+DARKNESS={"id":3,"condType":"time","cond":"69000","speed":0.10}
+DARKNESS={"id":1,"x1":0,"y1":576,"x2":2048,"y2":576,"condType":"time","cond":"68000","speed":0.10}
+DARKNESS={"id":1,"condType":"time","cond":"71000","speed":0}
+DARKNESS={"id":3,"condType":"time","cond":"70500","speed":0}
+DARKNESS={"id":0,"condType":"time","cond":"71000","speed":-5}
+DARKNESS={"id":2,"x1":2048,"y1":0,"x2":2048,"y2":576,"condType":"time","cond":"71000","speed":5,"damage":5}
+START
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+B                                                              B
+B    ~                                                         B
+B   DDDD           DDDD                   DDDD        ~        B
+B                                                    DDDD      B
+B                                                              B
+B          DDDD                  DDDD                          B
+B                                               DDDD           B
+B S               DDDD                                         B
+B DDDD                                                         B
+B                           DDDDDD                             B
+B          DDDD                                        DDDD    B
+B                     ~               DDDD                     B
+B                    DDDD                                      B
+B    DDDD                                         DDDD         B
+B                            DDDD                              B
+B                                                              B
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB

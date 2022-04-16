@@ -1,0 +1,35 @@
+b={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":true,"type":"","img":"city_border"}
+C={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":true,"type":"","img":"city_block"}
+c={"x":0,"y":0,"sizeX":32,"sizeY":16,"isSolid":true,"type":"","img":"city_block_half"}
+<={"x":0,"y":0,"sizeX":32,"sizeY":16,"isSolid":true,"type":"","img":"city_block_half","offsetY":16}
+1={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":false,"type":"lantern","img":"lantern_1"}
+2={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":false,"type":"lantern","img":"lantern_2"}
+3={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":false,"type":"lantern","img":"lantern_3"}
+4={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":false,"type":"lantern","img":"lantern_4"}
+5={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":false,"type":"lantern","img":"lantern_5"}
+#={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":false,"type":"door","img":"red_door"}
+F={"x":0,"y":0,"sizeX":32,"sizeY":16,"isSolid":false,"type":"jump","img":"trampoline","offsetY":16}
+MAP={"width":64,"height":18,"nextMap":"maps/map2.txt","condType":"lantern","bgImg":"img/bgs/level_1.png","bgImgWidth":2048,"bgImgHeight":576,"music":"hopeless","batteryDrain":1}
+DARKNESS={"id":0,"x1":0,"y1":0,"x2":0,"y2":576,"dir":"right","condType":"time","cond":"0","speed":0.2,"damage":1}
+DARKNESS={"id":0,"condType":"lantern","cond":"2","speed":1}
+DARKNESS={"id":0,"condType":"lantern","cond":"4","speed":2}
+DARKNESS={"id":0,"condType":"lantern","cond":"5","speed":3}
+START
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+Cc                                                             b
+C                                   1                          b
+C                           CCCCCCCCCCCCCCC                    b
+C                           C             C                   Sb
+C                           C             C               <CCCCb
+C                           C 2          CCCCC<         <Cc    b
+C                  CCCCCCCCCCCCC          C  cCCCCCCCCCCc      b
+C                                      CCCc                    b
+CCCCC       CCCC                                               b
+C                                CCC                           b
+C     3              CCCC                                      b
+CCCCCCCC   CCCC                   5                           4b
+C          C      CCC            CCC      CCC    CCC<     CCCCCb
+C        CCC       C              C        C        cCC<     #Cb
+C                  C            CCCCC      C           cCCCCCCCb
+C               CCCCCCC   FFF     C      CCCCC                Cb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
