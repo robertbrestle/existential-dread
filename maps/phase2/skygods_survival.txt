@@ -1,6 +1,6 @@
 B={"img":"factory_border"}
 D={"img":"factory_floor"}
-~={"isSolid":false,"type":"battery","img":"battery"}
+~={"isSolid":false,"hasGlow":true,"type":"battery","img":"battery"}
 F={"sizeY":16,"isSolid":false,"type":"jump","img":"trampoline","offsetY":16}
 MAP={"width":64,"height":18,"x":0,"y":96,"floorX":2048,"floorY":576,"nextMap":"","music":"dreams_into_darkness","condType":"countdown","cond":90000}
 SPAWN={"x":2,"y":8,"mod":32}

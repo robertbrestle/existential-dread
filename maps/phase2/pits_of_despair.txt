@@ -4,7 +4,7 @@ C={"img":"city_block"}
 ~={"isSolid":false,"type":"battery","img":"battery"}
 #={"isSolid":false,"type":"door","img":"red_door"}
 F={"sizeY":16,"isSolid":false,"type":"jump","img":"trampoline","offsetY":16}
-MAP={"width":104,"height":18,"nextMap":"maps/pacer.txt","music":"hopeless","batteryDrain":0.5}
+MAP={"width":104,"height":18,"nextMap":"maps/phase2/pacer.txt","music":"hopeless","batteryDrain":0.5}
 DARKNESS={"id":0,"x1":0,"y1":0,"x2":3328,"y2":576,"dir":"right","condType":"time","cond":"0","speed":0,"damage":2}
 START
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb

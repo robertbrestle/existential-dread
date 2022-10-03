@@ -16,7 +16,9 @@
 		<div id="title" class="hidden">
 			<div class="menu">
 				<ul>
-					<li><button class="green" onclick="resetGame()">Play Original</button></li>
+					<li><button class="green" onclick="resetGame(map.firstMapOriginal)">Play Original</button></li>
+					<li><button class="purple" onclick="resetGame(map.firstMapPhase2)">Play Phase II (Preview)</button></li>
+					<li><button class="red" onclick="resetGame(map.firstMapTutorial)">Play Tutorial</button></li>
 					<li><button onclick="renderTitle('story')">Story</button></li>
 					<li><button onclick="renderTitle('instructions')">Instructions</button></li>
 					<li><button onclick="renderTitle('credits')">Credits</button></li>

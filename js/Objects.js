@@ -28,7 +28,10 @@ var tileRef = {
 	isSolid: true,
 	//isStatic: true,
 	type: "",
-	img: 0
+	target: "",
+	img: "",
+	imgSwitch: "",
+	hasGlow: false
 };
 
 function loadImage(path, x, y) {
@@ -70,6 +73,7 @@ var tile_imgs = {
 	"factory_floor_half": { x: 128, y: 0, sizeY: 16 },
 	"subway_border": { x: 160, y: 0 },
 	"subway_border_half": { x: 160, y: 0, sizeY: 16 },
+	"subway_border_cracked": { x: 192, y: 64 },
 	"subway_block": { x: 192, y: 0 },
 	"subway_block_half": { x: 192, y: 0, sizeY: 16 },
 	"red_door": { x: 32, y: 32 },
@@ -83,8 +87,11 @@ var tile_imgs = {
 	"lantern_4": { x: 128, y: 64 },
 	"lantern_5": { x: 160, y: 64 },
 	"trampoline": { x: 128, y: 48, sizeY: 16 },
-	"grandma_wallpaper": { x: 0, y: 96 },
-	"grandma_wallpaper_half": { x: 0, y: 96, sizeY: 16 },
+	"grandma_wallpaper": { x: 160, y: 32 },
+	"grandma_wallpaper_half": { x: 160, y: 48, sizeY: 16 },
+	"button_off": { x: 0, y: 95, sizeY: 16 },
+	"button_on": { x: 0, y: 112, sizeY: 16 },
+	"glow_small": { x: 192, y: 32, sizeX: 32, sizeY: 32 },
 	"glow": { x: 64, y: 96, sizeX: 160, sizeY: 160 }
 };
 // add default sizes if missing
@@ -133,7 +140,9 @@ var map = {
 	totalMS: 0,
 	alpha: 1,
 	fadeImg: "",
-	firstMap: "maps/map1.txt",
+	firstMapOriginal: "maps/original/map1.txt",
+	firstMapPhase2: "maps/phase2/pacer.txt",
+	firstMapTutorial: "maps/tutorial.txt",
 	nextMap: "",
 	condType: "",
 	cond: "",

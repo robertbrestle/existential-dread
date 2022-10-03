@@ -77,6 +77,11 @@ LoadMapJS = {
 						if(typeof t.type === "undefined") {
 							t.type = tileRef.type;
 						}
+						if(typeof t.target === "undefined") {
+							t.target = tileRef.target;
+						}else {
+							t.target = t.target;
+						}
 						if(typeof t.offsetX === "undefined") {
 							t.offsetX = tileRef.offsetX;
 						}else {
@@ -86,6 +91,11 @@ LoadMapJS = {
 							t.offsetY = tileRef.offsetY;
 						}else {
 							t.offsetY = Number(t.offsetY);
+						}
+						if(typeof t.hasGlow === "undefined") {
+							t.hasGlow = tileRef.hasGlow;
+						}else {
+							t.hasGlow = Boolean(t.hasGlow);
 						}
 
 						tileMap[key[0].toString()] = t;

@@ -1,6 +1,6 @@
 B={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":true,"type":"","img":"factory_border"}
 D={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":true,"type":"","img":"factory_floor"}
-~={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":false,"type":"battery","img":"battery"}
+~={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":false,"hasGlow":true,"type":"battery","img":"battery"}
 MAP={"width":64,"height":18,"nextMap":"","bgImg":"img/bgs/level_3.png","bgImgWidth":2048,"bgImgHeight":576,"music":"dreams_into_darkness","condType":"countdown","cond":90000,"batteryDrain":1}
 DARKNESS={"id":0,"x1":0,"y1":0,"x2":0,"y2":576,"dir":"right","condType":"time","cond":"2000","speed":1.33,"damage":1}
 DARKNESS={"id":1,"x1":0,"y1":576,"x2":2048,"y2":576,"dir":"up","condType":"time","cond":"2000","speed":0.25,"damage":1}

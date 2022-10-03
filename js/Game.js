@@ -3,7 +3,6 @@ function init() {
 	document.getElementById("start").className = "hidden";
 	
 	document.addEventListener("keydown", function(e) {
-		//https://w3c.github.io/uievents/#dom-keyboardevent-key
 		switch(e.key) {
 			case 'W':
 			case 'w':
@@ -75,20 +74,18 @@ function init() {
 				break;
 			default:
 				if(debug) {
-					console.log(e.key);
+					//console.log(e.key);
 				}
 				break;
 		}
 	}, false);
 	
 	document.addEventListener("keyup", function(e) {
-		//wasd = 87, 65, 83, 68
 		switch(e.key) {
 			case 'W':
 			case 'w':
 			case "ArrowUp":
 			case ' ':
-				//e.preventDefault();
 				wasd[0] = false;
 				break;
 			case 'A':
@@ -147,7 +144,7 @@ function init() {
 
 	//EditorJS.init();
 }
-function resetMapPlayer() {
+function resetMapPlayer(mapFile) {
 	wasd = [false, false, false, false];
 	player.health = player.statMax;
 	player.stamina = player.statMax;
@@ -164,21 +161,21 @@ function resetMapPlayer() {
 	player.lanternParts = 0;
 	player.batteryCharge = player.batteryRefill;
 	
-	map.nextMap = map.firstMap;
+	map.nextMap = mapFile;
 	map.level = 0;
 	map.overlayAlpha = map.overlayAlphaReset;
 	map.passedMS = 0;
 	map.totalMS = 0;
 	isLoadNextMap = true;
 }
-function resetGame() {
+function resetGame(mapFile) {
 	isGameOver = false;
 
 	document.getElementById("title").className = "hidden";
 	document.getElementById("back").className = "hidden";
 	document.getElementById("gameover").className = "hidden";
 
-	resetMapPlayer();
+	resetMapPlayer(mapFile);
 	
 	ctick = 0;
 	ctock = 0;
@@ -396,9 +393,11 @@ function collision() {
 	// check if player is in the darkness
 	player.inDarkness = false;
 	if(!player.inSafeZone) {
+		// TODO: change to "for" for performance increase
 		darknesses.darkness.forEach(function(e) {
 			// TODO: limit check if darkness visible
 			// TODO: fix bug where opposite coordinate is NOT checked (ie "up" needs to reference the e.x* coords)
+			// TODO: this doesn't support independent darkness "zones" (darkness not based on a direction/side)
 			if((player.y + player.sizeY > e.y1 && e.dir === "up") ||
 			   (player.x + player.sizeX > e.x1 && e.dir === "left") ||
 			   (player.y < e.y2 && e.dir === "down") ||
@@ -503,11 +502,26 @@ function checkTileCollision(tile, i) {
 								player.lanternParts++;
 								map.tiles.splice(i,1);
 								break;
+							case "remove":
+								map.tileMap[map.tileMap[tile.type].target].isSolid = false;
+								map.tileMap[map.tileMap[tile.type].target].img = "clear";
+								// if exists, switch image; else remove tile
+								if(map.tileMap[tile.type].imgSwitch !== "undefined") {
+									map.tileMap[tile.type].img = map.tileMap[tile.type].imgSwitch;
+									// disable button
+									map.tileMap[tile.type].type = "";
+								}else {
+									map.tiles.splice(i,1);
+								}
+								break;
 							case "door":
 								if(isEditorTesting) {
 									isGameOver = true;
-								}else {
+								}else if(map.nextMap != "") {
 									isLoadNextMap = true;
+								}else {
+									// TODO: refactor this
+									isGameOver = true;
 								}
 								return;
 							default:
@@ -702,8 +716,16 @@ function draw() {
 	if(!inCompleteDarkness) {
 		for(let i = 0; i < map.tiles.length; i++) {
 			let tile = map.tiles[i];
-			if(tile.x - map.x < map.screenX && tile.y - map.y < map.screenY) {
-				p_ctx.drawImage(tile_spritesheet, tile_imgs[map.tileMap[tile.type].img].x, tile_imgs[map.tileMap[tile.type].img].y, tile_imgs[map.tileMap[tile.type].img].sizeX, tile_imgs[map.tileMap[tile.type].img].sizeY, tile.x - map.x, tile.y - map.y, map.tileMap[tile.type].sizeX, map.tileMap[tile.type].sizeY);
+			if(tile.x - map.x < map.screenX && tile.y - map.y < map.screenY && !map.tileMap[tile.type].hasGlow) {
+				p_ctx.drawImage(tile_spritesheet,
+								tile_imgs[map.tileMap[tile.type].img].x,
+								tile_imgs[map.tileMap[tile.type].img].y,
+								tile_imgs[map.tileMap[tile.type].img].sizeX,
+								tile_imgs[map.tileMap[tile.type].img].sizeY,
+								tile.x - map.x,
+								tile.y - map.y,
+								map.tileMap[tile.type].sizeX,
+								map.tileMap[tile.type].sizeY);
 				if(debugTiles) {
 					p_ctx.strokeRect(tile.x - map.x, tile.y - map.y, map.tileMap[tile.type].sizeX, map.tileMap[tile.type].sizeY);
 					p_ctx.strokeText('['+i+']', tile.x - map.x, tile.y - map.y + map.tileMap[tile.type].sizeY/2);
@@ -746,25 +768,12 @@ function draw() {
 
 	// render things that glow in the dark
 	for(let i = 0; i < map.tiles.length; i++) {
-		let gtile = map.tiles[i];
-		if(map.tileMap[gtile.type].type === "glow") {
-			if(gtile.x - map.x - map.glowLightSize < map.screenX && gtile.y - map.y - map.glowLightSize < map.screenY) {
-				// draw flashlight background
-				p_ctx.drawImage(tile_spritesheet, tile_imgs[map.tileMap[gtile.type].img].x, tile_imgs[map.tileMap[gtile.type].img].y, tile_imgs[map.tileMap[gtile.type].img].sizeX, tile_imgs[map.tileMap[gtile.type].img].sizeY, gtile.x - map.x, gtile.y - map.y, map.tileMap[gtile.type].sizeX, map.tileMap[gtile.type].sizeY);
-				p_ctx.drawImage(tile_spritesheet, tile_imgs["glow"].x, tile_imgs["glow"].y, tile_imgs["glow"].sizeX, tile_imgs["glow"].sizeY, gtile.x - map.x - (tile_imgs["glow"].sizeX + tileRef.sizeX) / 2, gtile.y - map.y - (tile_imgs["glow"].sizeY + tileRef.sizeY) / 2, map.glowLightRender, map.glowLightRender);
-				// redraw blocks
-				for(let i = 0; i < map.tiles.length; i++) {
-					let tile = map.tiles[i];
-					if(tile.x - map.x + map.glowLightSize > gtile.x - map.x &&
-						tile.x - map.x - map.glowLightSize < gtile.x - map.x &&
-						tile.y - map.y + map.glowLightSize > gtile.y - map.y &&
-						tile.y - map.y - map.glowLightSize < gtile.y - map.y) {
-						p_ctx.drawImage(tile_spritesheet, tile_imgs[map.tileMap[tile.type].img].x, tile_imgs[map.tileMap[tile.type].img].y, tile_imgs[map.tileMap[tile.type].img].sizeX, tile_imgs[map.tileMap[tile.type].img].sizeY, tile.x - map.x, tile.y - map.y, map.tileMap[tile.type].sizeX, map.tileMap[tile.type].sizeY);
-					}
-				}
-			}
-		}else if(map.tileMap[gtile.type].type === "battery") {
-			p_ctx.drawImage(tile_spritesheet, tile_imgs[map.tileMap[gtile.type].img].x, tile_imgs[map.tileMap[gtile.type].img].y, tile_imgs[map.tileMap[gtile.type].img].sizeX, tile_imgs[map.tileMap[gtile.type].img].sizeY, gtile.x - map.x, gtile.y - map.y, map.tileMap[gtile.type].sizeX, map.tileMap[gtile.type].sizeY);
+		let tile = map.tiles[i];
+		if(map.tileMap[tile.type].hasGlow) {
+			// render glow
+			p_ctx.drawImage(tile_spritesheet,tile_imgs["glow_small"].x,tile_imgs["glow_small"].y,tile_imgs["glow_small"].sizeX,tile_imgs["glow_small"].sizeY,tile.x - map.x,tile.y - map.y,map.tileMap[tile.type].sizeX,map.tileMap[tile.type].sizeY);
+			// render tile
+			p_ctx.drawImage(tile_spritesheet, tile_imgs[map.tileMap[tile.type].img].x, tile_imgs[map.tileMap[tile.type].img].y, tile_imgs[map.tileMap[tile.type].img].sizeX, tile_imgs[map.tileMap[tile.type].img].sizeY, tile.x - map.x, tile.y - map.y, map.tileMap[tile.type].sizeX, map.tileMap[tile.type].sizeY);
 		}
 	}
 	

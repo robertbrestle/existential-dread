@@ -1,0 +1,45 @@
+B={"sizeX":32,"sizeY":32,"offsetX":0,"offsetY":0,"isSolid":true,"type":"","img":"subway_block"}
+a={"sizeX":32,"sizeY":32,"offsetX":0,"offsetY":0,"isSolid":false,"type":"","img":"factory_floor"}
+b={"sizeX":32,"sizeY":16,"offsetX":0,"offsetY":16,"isSolid":true,"type":"","img":"subway_block_half"}
+X={"sizeX":32,"sizeY":32,"offsetX":0,"offsetY":0,"isSolid":false,"type":"door","img":"red_door"}
+T={"sizeX":32,"sizeY":16,"offsetX":0,"offsetY":16,"isSolid":false,"type":"jump","img":"trampoline"}
+H={"sizeX":32,"sizeY":32,"offsetX":0,"offsetY":0,"isSolid":false,"type":"","img":"subway_block"}
+~={"sizeX":32,"sizeY":32,"offsetX":0,"offsetY":0,"isSolid":false,"hasGlow":true,"type":"battery","img":"battery"}
+c={"sizeX":32,"sizeY":16,"offsetX":0,"offsetY":0,"isSolid":true,"type":"","img":"subway_block_half"}
+1={"isSolid":false,"hasGlow":true,"type":"lantern","img":"lantern_1"}
+2={"isSolid":false,"hasGlow":true,"type":"lantern","img":"lantern_2"}
+3={"isSolid":false,"hasGlow":true,"type":"lantern","img":"lantern_3"}
+4={"isSolid":false,"hasGlow":true,"type":"lantern","img":"lantern_4"}
+5={"isSolid":false,"hasGlow":true,"type":"lantern","img":"lantern_5"}
+y={"isSolid":false,"type":"remove","target":"Y","img":"button_off","imgSwitch":"button_on"}
+z={"isSolid":false,"type":"remove","target":"Z","img":"button_off","imgSwitch":"button_on"}
+Q={"sizeX":32,"sizeY":32,"isSolid":true,"img":"subway_border"}
+Y={"sizeX":32,"sizeY":32,"isSolid":true,"img":"subway_border_cracked"}
+Z={"sizeX":32,"sizeY":32,"isSolid":true,"img":"subway_border_cracked"}
+MAP={"width":100,"height":24,"cameraX":"","cameraY":"","nextMap":"","music":"none","bgImg":"","bgImgWidth":0,"bgImgHeight":0,"bgColor":"#000","overlayColor":"#F00","overlayAlpha":"0","batteryDrain":0,"condType":"lantern","cond":""}
+DARKNESS={"id":0,"x1":1664,"y1":0,"x2":3200,"y2":768,"dir":"left","condType":"time","cond":"0","speed":0,"damage":0}
+START
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+B                                                  BBB     BBB     BBB     BBB     BBB     BBB     B
+B                                                                                                  B
+B      y                                       BBB     BBB     BBB     BBB     BBB     BBB         B
+BYYYQQQQQQQQQQQQQQQQQQQ                                                                            B
+B         ZZ                                       BBB     BBB     BBB     BBB     BBB             B
+B         ZZ                               T                                                       B
+B X       ZZ   z            T              B           BBB     BBB     BBB     BBB                 B
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB              BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB       B
+BBBBBc                          BBBBBB            BB    ~                                 ~BB     BB
+BBBc                            BBBBBB            BB    B                               BBBBB      B
+Bc                              BBBBBB            BB   BB              ~                  cBB     BB
+B                               BBBBBB            BB   B             BBBBb                 BB      B
+B                               BBBBBB  T         BB  B                  BB                BB     BB
+B                               BB   H  B         BB                      Bb               BB      B
+B    aaa                        BB ~ B            BB          ~         BBBBBBBBBb         BBb     B
+B      a    BB         BBb      BB   Bb     TTT  bBBB        BBB                 B         BB      B
+B    a a   BBB         BBBBb     BBBBBBBBBBBBBBBBBBB                             H         BB      B
+B   a     BBBB         BBBBBBb     BBBBBBBBBBBBBBBBB                             B     ~   BBb     B
+B  a     BBBBB         BBBBBBBBb     BBBBBBBBBBBBBBBBB         BB                BBBBBBBBBBBB      B
+B       BBBBBB         BBBBBBBBBBb                   cBBBBB  BBBBBB        B                      BB
+B      BBBBBBB         BBBBBBBBBBBBb                                      BBB                      B
+B S                    BBBBBBBBBBBBBBb   1 2 3 4 5     ~                 BBBBB        ~           bB
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
