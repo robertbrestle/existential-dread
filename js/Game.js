@@ -113,6 +113,7 @@ function init() {
 
 	
 	isGameOver = false;
+	isGameSuccessful = false;
 	isStarted = false;
 	isPaused = false;
 	
@@ -169,6 +170,7 @@ function resetMapPlayer(mapFile) {
 	isLoadNextMap = true;
 }
 function resetGame(mapFile) {
+	isGameSuccessful = false;
 	isGameOver = false;
 
 	document.getElementById("title").className = "hidden";
@@ -393,27 +395,26 @@ function collision() {
 	// check if player is in the darkness
 	player.inDarkness = false;
 	if(!player.inSafeZone) {
-		// TODO: change to "for" for performance increase
-		darknesses.darkness.forEach(function(e) {
+		for(let i = 0; i < darknesses.darkness.length; i++) {
 			// TODO: limit check if darkness visible
 			// TODO: fix bug where opposite coordinate is NOT checked (ie "up" needs to reference the e.x* coords)
 			// TODO: this doesn't support independent darkness "zones" (darkness not based on a direction/side)
-			if((player.y + player.sizeY > e.y1 && e.dir === "up") ||
-			   (player.x + player.sizeX > e.x1 && e.dir === "left") ||
-			   (player.y < e.y2 && e.dir === "down") ||
-			   (player.x < e.x2 && e.dir === "right")) {
+			if((player.y + player.sizeY > darknesses.darkness[i].y1 && darknesses.darkness[i].dir === "up") ||
+			   (player.x + player.sizeX > darknesses.darkness[i].x1 && darknesses.darkness[i].dir === "left") ||
+			   (player.y < darknesses.darkness[i].y2 && darknesses.darkness[i].dir === "down") ||
+			   (player.x < darknesses.darkness[i].x2 && darknesses.darkness[i].dir === "right")) {
 				player.inDarkness = true;
 				if(!player.lanternOn) {
-					player.health -= e.damage;
+					player.health -= darknesses.darkness[i].damage;
 					// increase darkness overlay with lower health
-						if(player.health < (player.statMax/4)) {
-							map.overlayAlpha = (map.overlayAlphaReset + 0.2);
-						}else if(player.health < (player.statMax/2)) {
-							map.overlayAlpha = (map.overlayAlphaReset + 0.1);
-						}
+					if(player.health < (player.statMax/4)) {
+						map.overlayAlpha = (map.overlayAlphaReset + 0.2);
+					}else if(player.health < (player.statMax/2)) {
+						map.overlayAlpha = (map.overlayAlphaReset + 0.1);
+					}
 				}
 			}
-		});
+		}//for
 	}
 }//collision
 
@@ -516,11 +517,13 @@ function checkTileCollision(tile, i) {
 								break;
 							case "door":
 								if(isEditorTesting) {
+									isGameSuccessful = true;
 									isGameOver = true;
 								}else if(map.nextMap != "") {
 									isLoadNextMap = true;
 								}else {
 									// TODO: refactor this
+									isGameSuccessful = true;
 									isGameOver = true;
 								}
 								return;
@@ -550,7 +553,7 @@ function checkTileCollision(tile, i) {
 function updateDarkness() {
 	if(darknesses.instructions.length > 0) {
 		let peek = darknesses.instructions[darknesses.instructions.length - 1];
-		if((peek.condType === "time" && map.passedMS > Number(peek.cond)) ||
+		if((peek.condType === "time" && map.passedMS >= Number(peek.cond)) ||
 		   (peek.condType === "lantern" && player.lanternParts >= Number(peek.cond)) ||
 		   (peek.condType === "position" && Math.floor(player.x / player.sizeX) === peek.condPosition.x && Math.floor(player.y / player.sizeY) === peek.condPosition.y)
 		   ) {
@@ -568,15 +571,15 @@ function updateDarkness() {
 					x2: darknesses.darkness[darkIndex].x2,
 					y2: darknesses.darkness[darkIndex].y2
 				};
-				keys.forEach(function(k) {
-					darknesses.darkness[darkIndex][k] = peek[k];
-				});
+				for(let i = 0; i < keys.length; i++) {
+					darknesses.darkness[darkIndex][keys[i]] = peek[keys[i]];
+				}
 				
 				if(peek.condType === "position" && peek.condPosition.handoff) {
 					let keys = Object.keys(oldPos);
-					keys.forEach(function(k) {
-						darknesses.darkness[darkIndex][k] = oldPos[k];
-					});
+					for(let i = 0; i < keys.length; i++) {
+						darknesses.darkness[darkIndex][keys[i]] = oldPos[keys[i]];
+					}
 				}
 			}
 			darknesses.instructions.pop();
@@ -634,7 +637,7 @@ function updateSlowTicks() {
 
 	if(isGameOver) {
 		map.totalMS += map.passedMS;
-		renderTitle("gameover", false);
+		renderTitle("gameover", isGameSuccessful);
 		stopMusic();
 		document.getElementById("back").className = "hidden";
 		document.getElementById("gameover").className = '';

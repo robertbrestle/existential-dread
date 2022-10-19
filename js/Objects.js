@@ -11,6 +11,7 @@ var canvas = {};
 var ctx = {};
 
 var isGameOver = false;
+var isGameSuccessful = false;
 var isStarted = false;
 var isPaused = false;
 var isSoundEnabled = true;
@@ -105,7 +106,7 @@ Object.keys(tile_imgs).forEach(function(key) {
 });
 
 var title_imgs = {
-	"splash": loadImage("img/titles/HurrrrDeerStudios.png", 640, 480),
+	"splash": loadImage("img/titles/HurrrrDeerStudios2.png", 640, 480),
 	"title": loadImage("img/titles/title.png", 640, 480),
 	"instructions": loadImage("img/titles/instructions.png", 640, 480),
 	"story": loadImage("img/titles/story.png", 640, 480),

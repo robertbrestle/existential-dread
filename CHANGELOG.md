@@ -1,6 +1,18 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.2] - 2022-10-19
+### Added
+- New splash image
+- Phase II new levels
+- Temporary variable `isGameSuccessful` for determining if a level was completed successfully
+
+### Changed
+- Replaced all `forEach` loops with `for`
+
+### Fixed
+- `updateDarkness()` now properly adds darkness on the first tick
+
 ## [1.0.1] - 2022-10-02
 ### Added
 - Tile triggers

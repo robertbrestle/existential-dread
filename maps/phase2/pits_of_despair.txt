@@ -1,10 +1,10 @@
 b={"img":"city_border"}
 C={"img":"city_block"}
 <={"sizeY":16,"img":"city_block_half","offsetY":16}
-~={"isSolid":false,"type":"battery","img":"battery"}
+~={"isSolid":false,"hasGlow":true,"type":"battery","img":"battery"}
 #={"isSolid":false,"type":"door","img":"red_door"}
 F={"sizeY":16,"isSolid":false,"type":"jump","img":"trampoline","offsetY":16}
-MAP={"width":104,"height":18,"nextMap":"maps/phase2/pacer.txt","music":"hopeless","batteryDrain":0.5}
+MAP={"width":104,"height":18,"nextMap":"","music":"hopeless","batteryDrain":0.5}
 DARKNESS={"id":0,"x1":0,"y1":0,"x2":3328,"y2":576,"dir":"right","condType":"time","cond":"0","speed":0,"damage":2}
 START
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
@@ -22,6 +22,6 @@ b        C  CCC    CCCCCCCC                   C  C           C   C    C    CCCCC
 bCCCCCCCCC  C      C                          C  C           C   C C          C              CCCCC     b
 b           C       CCC           CCC      CCCC  CCCC     CCCCCCCC C          C                   C    b
 b        CCCC      C            C C C      C~      CC     C        C    F     C                   C    b
-b          ~C       C           C   C      CC          CCCCCCCC    CCCCCCCC   C    CCCCCC         C    b
-b    S      CF     CCCC     F   CCCCC          FF  CC     C                   C    C      FF    ~ C    b
+b          ~C       C           C   C      CC          CCCCCCCC    CCCCCCCC   CCCCCCCCCCC         C    b
+b    ~      CF     CCCC     F   CCCCC          FF  CC     C                  SC# C        FF    ~ C    b
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb

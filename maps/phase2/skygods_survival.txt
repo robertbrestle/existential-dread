@@ -2,44 +2,30 @@ B={"img":"factory_border"}
 D={"img":"factory_floor"}
 ~={"isSolid":false,"hasGlow":true,"type":"battery","img":"battery"}
 F={"sizeY":16,"isSolid":false,"type":"jump","img":"trampoline","offsetY":16}
-MAP={"width":64,"height":18,"x":0,"y":96,"floorX":2048,"floorY":576,"nextMap":"","music":"dreams_into_darkness","condType":"countdown","cond":90000}
-SPAWN={"x":2,"y":8,"mod":32}
-DARKNESS={"id":0,"x1":0,"y1":0,"x2":0,"y2":576,"dir":3,"condType":"time","cond":"2000","speed":1.33,"damage":1}
-DARKNESS={"id":1,"x1":0,"y1":576,"x2":2048,"y2":576,"dir":0,"condType":"time","cond":"2000","speed":0.25,"damage":1}
-DARKNESS={"id":0,"condType":"time","cond":"20000","speed":-1.33}
-DARKNESS={"id":1,"condType":"time","cond":"20000","speed":-0.5}
-DARKNESS={"id":2,"x1":2048,"y1":0,"x2":2048,"y2":576,"dir":1,"condType":"time","cond":"20000","speed":1,"damage":1}
-DARKNESS={"id":3,"x1":0,"y1":0,"x2":2048,"y2":0,"dir":2,"condType":"time","cond":"20000","speed":0.20,"damage":1}
-DARKNESS={"id":1,"condType":"time","cond":"26000","speed":0}
-DARKNESS={"id":0,"condType":"time","cond":"35000","speed":0}
-DARKNESS={"id":2,"condType":"time","cond":"46000","speed":-4}
-DARKNESS={"id":1,"condType":"time","cond":"46000","speed":-2}
-DARKNESS={"id":3,"condType":"time","cond":"46000","speed":-2}
-DARKNESS={"id":0,"condType":"time","cond":"51000","speed":3}
-DARKNESS={"id":3,"x1":0,"y1":0,"x2":2048,"y2":0,"condType":"time","cond":"55000","speed":0.5}
-DARKNESS={"id":0,"condType":"time","cond":"59000","speed":0.10}
-DARKNESS={"id":3,"condType":"time","cond":"69000","speed":0.10}
-DARKNESS={"id":1,"x1":0,"y1":576,"x2":2048,"y2":576,"condType":"time","cond":"68000","speed":0.10}
-DARKNESS={"id":1,"condType":"time","cond":"71000","speed":0}
-DARKNESS={"id":3,"condType":"time","cond":"70500","speed":0}
-DARKNESS={"id":0,"condType":"time","cond":"71000","speed":-5}
-DARKNESS={"id":2,"x1":2048,"y1":0,"x2":2048,"y2":576,"condType":"time","cond":"71000","speed":5,"damage":5}
+MAP={"width":60,"height":24,"x":0,"y":96,"floorX":2048,"floorY":576,"nextMap":"","bgColor":"#000","music":"dreams_into_darkness","condType":"countdown","cond":90000}
+DARKNESS={"id":0,"x1":0,"y1":0,"x2":0,"y2":768,"dir":"right","condType":"time","cond":"2000","speed":1,"damage":1}
 START
-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
-B       ~                                        ~        B
-B     DDDDD                                    DDDDD      B
-B                       D  D                              B
-B                       D  D                              B
-B          DDDDD        D  D                              B
-B        DDD   DDD      D  D                              B
-B       D        DD                                       B
-B            s    DDDDDDDDDDDDDDDDDDDDDDDDDD              B
-B       D        DD                                       B
-B        DDD   DDD              D  D                      B
-B          DDDDD                D  D                      B
-B                               D  D                      B
-B                               D  D                      B
-B     F ~                                        ~ F      B
-B     DDDDD                                    DDDDD      B
-B                                                         B
-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+B                                                          B
+B                                                          B
+B                                                          B
+B       ~                                        ~         B
+B     DDDDD                                    DDDDD       B
+B                       D  D                               B
+B                       D  D                               B
+B          DDDDD        D  D                               B
+B                       D  D                               B
+B        D       D                                         B
+B        D       D                                         B
+B        D   S   DDDDDDD    DDDDDDDDD   DDDD~              B
+B        D       D                                         B
+B        D       D                                         B
+B                               D  D                       B
+B          DDDDD                D  D                       B
+B                               D  D                       B
+B                               D  D                       B
+B     F ~                                       F          B
+B     DDDDD                                    DDDDD       B
+B                                                          B
+B                                                          B
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
