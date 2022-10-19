@@ -23,5 +23,5 @@ bCCCCCCCCC  C      C                          C  C           C   C C          C 
 b           C       CCC           CCC      CCCC  CCCC     CCCCCCCC C          C                   C    b
 b        CCCC      C            C C C      C~      CC     C        C    F     C                   C    b
 b          ~C       C           C   C      CC          CCCCCCCC    CCCCCCCC   CCCCCCCCCCC         C    b
-b    ~      CF     CCCC     F   CCCCC          FF  CC     C                  SC# C        FF    ~ C    b
+b    S      CF     CCCC     F   CCCCC          FF  CC     C                   C# C        FF    ~ C    b
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
