@@ -6,7 +6,7 @@ b={"img":"city_border"}
 5={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":false,"hasGlow":true,"type":"lantern","img":"lantern_5"}
 #={"isSolid":false,"type":"door","img":"red_door"}
 x={"isSolid":false,"img":"clear"}
-MAP={"width":117,"height":15,"nextMap":"maps/phase2/pits_of_despair.txt","condType":"lantern","bgColor":"#000","cameraY":205,"music":"hopeless","batteryDrain":0}
+MAP={"width":20,"height":15,"nextMap":"maps/phase2/pits_of_despair.txt","condType":"lantern","bgColor":"#000","cameraY":205,"batteryDrain":0}
 START
 x
 x

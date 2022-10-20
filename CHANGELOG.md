@@ -1,6 +1,18 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.3] - 2022-10-20
+### Added
+- New soundtrack `fear_rising_reversed`
+
+### Changed
+- Slight modifications `tutorial` and `lantern_placeholder` maps
+
+### Fixed
+- Up and Down arrows will no longer scroll the page
+- Check for map music will no longer error when empty/undefined
+- Replaced deprecated `substr` with `substring`
+
 ## [1.0.2] - 2022-10-19
 ### Added
 - New splash image

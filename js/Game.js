@@ -33,6 +33,9 @@ function init() {
 			case 'S':
 			case 's':
 			case "ArrowDown":
+				if(e.target.nodeName === "BODY") {
+					e.preventDefault();
+				}
 				wasd[2] = true;
 				break;
 			case 'D':

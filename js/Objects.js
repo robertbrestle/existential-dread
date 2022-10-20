@@ -120,6 +120,7 @@ var music_tracks = {
 	"title": "audio/music/existential_dread_0.mp3",
 	"hopeless": "audio/music/hopeless_1.mp3",
 	"fear_rising": "audio/music/fear_rising_2.mp3",
+	"fear_rising_reversed": "audio/music/fear_rising_reversed.mp3",
 	"dreams_into_darkness": "audio/music/dreams_into_darkness_3.mp3"
 };
 
@@ -282,9 +283,9 @@ function formatRuntime(runTime) {
 	if(total > 60) {
 		runTimeMinutes = total / 60;
 		runTimeSeconds = (runTimeMinutes % 1) * 60;
-		result = ("" + Math.floor(runTimeMinutes)).padStart(2, "0") + ":" + ("" + Math.floor(runTimeSeconds)).padStart(2, "0") + (runTimeSeconds % 1).toFixed(2).substr(1);
+		result = ("" + Math.floor(runTimeMinutes)).padStart(2, "0") + ":" + ("" + Math.floor(runTimeSeconds)).padStart(2, "0") + (runTimeSeconds % 1).toFixed(2).substring(1);
 	}else {
-		result = "00:" + ("" + Math.floor(total)).padStart(2, "0") + (total % 1).toFixed(2).substr(1);
+		result = "00:" + ("" + Math.floor(total)).padStart(2, "0") + (total % 1).toFixed(2).substring(1);
 	}
 	return result;
 }

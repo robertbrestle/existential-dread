@@ -21,15 +21,15 @@ DARKNESS={"id":0,"x1":1664,"y1":0,"x2":3200,"y2":768,"dir":"left","condType":"ti
 START
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 B                                                  BBB     BBB     BBB     BBB     BBB     BBB     B
-B                                                                                                  B
-B      y                                       BBB     BBB     BBB     BBB     BBB     BBB         B
-BYYYQQQQQQQQQQQQQQQQQQQ                                                                            B
-B         ZZ                                       BBB     BBB     BBB     BBB     BBB             B
-B         ZZ                               T                                                       B
-B X       ZZ   z            T              B           BBB     BBB     BBB     BBB                 B
-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB              BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB       B
-BBBBBc                          BBBBBB            BB    ~                                 ~BB     BB
-BBBc                            BBBBBB            BB    B                               BBBBB      B
+B                                                ~ Bc                                              B
+B      y                                      BBBBc    BBB     BBB     BBB     BBB     BBB         B
+BYYYQQQQQQQQQQQQQQQQQQQ                       BBc                                                  B
+B         ZZ                                  c            BBB     BBB     BBB     BBB             B
+B         ZZ                                                                                       B
+B X       ZZ   z        T                              BBB     BBB     BBB     BBB                 B
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB      T       BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB       B
+BBBBBc                          BBBBBB   B        BB    ~                                 ~BB     BB
+BBBc           BBBBBB           BBBBBB            BB    B                               BBBBB      B
 Bc                              BBBBBB            BB   BB              ~                  cBB     BB
 B                               BBBBBB            BB   B             BBBBb                 BB      B
 B                               BBBBBB  T         BB  B                  BB                BB     BB
@@ -38,8 +38,8 @@ B    aaa                        BB ~ B            BB          ~         BBBBBBBB
 B      a    BB         BBb      BB   Bb     TTT  bBBB        BBB                 B         BB      B
 B    a a   BBB         BBBBb     BBBBBBBBBBBBBBBBBBB                             H         BB      B
 B   a     BBBB         BBBBBBb     BBBBBBBBBBBBBBBBB                             B     ~   BBb     B
-B  a     BBBBB         BBBBBBBBb     BBBBBBBBBBBBBBBBB         BB                BBBBBBBBBBBB      B
+B  a     BBBBB         BBBBBBBBb     BBBBBBBBBBBBBBBBB   ~     BB          ~     BBBBBBBBBBBB      B
 B       BBBBBB         BBBBBBBBBBb                   cBBBBB  BBBBBB        B                      BB
 B      BBBBBBB         BBBBBBBBBBBBb                                      BBB                      B
-B S                    BBBBBBBBBBBBBBb   1 2 3 4 5     ~                 BBBBB        ~           bB
+B S                    BBBBBBBBBBBBBBb   1 2 3 4 5     ~                 BBBBB               ~    bB
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB

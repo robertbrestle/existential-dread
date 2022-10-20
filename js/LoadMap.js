@@ -221,7 +221,10 @@ LoadMapJS = {
 		darknesses.darkness = [];
 		darknesses.instructions = darkList.reverse();
 		
-		if(isSoundEnabled && keyMap["MAP"].music !== "none") {
+		if(isSoundEnabled &&
+		   typeof keyMap["MAP"].music !== "undefined" &&
+		   keyMap["MAP"].music !== "" &&
+		   keyMap["MAP"].music !== "none") {
 			loopMusic(music_tracks[keyMap["MAP"].music]);
 		}else {
 			stopMusic();
