@@ -17,7 +17,7 @@ function init() {
 					player.lastX = player.x;
 					player.lastY = player.y;
 					if(player.isSprinting) {
-						player.stamina -= player.sprintJump;
+						player.stamina -= player.sprintJumpStaminaCost;
 						player.vertSpeed = player.defaultSprintJumpSpeed;
 					}else {
 						player.vertSpeed = map.gravitySpeed * -1;
@@ -354,7 +354,7 @@ function updatePlayer() {
 	}else if(player.stamina > player.statMax) {
 		player.stamina = player.statMax;
 	}
-	if(player.isSprinting && (wasd[1] || wasd[3])) {
+	if(player.isSprinting && (wasd[1] || wasd[3]) && !player.isJumping) {
 		player.stamina -= 5;
 	}else if(player.stamina < player.statMax) {
 		player.stamina += 2;
@@ -506,16 +506,29 @@ function checkTileCollision(tile, i) {
 								player.lanternParts++;
 								map.tiles.splice(i,1);
 								break;
+							case "add":
+								// TODO
+								// may need additional property of what block to add
+								break;
 							case "remove":
-								map.tileMap[map.tileMap[tile.type].target].isSolid = false;
-								map.tileMap[map.tileMap[tile.type].target].img = "clear";
-								// if exists, switch image; else remove tile
-								if(map.tileMap[tile.type].imgSwitch !== "undefined") {
-									map.tileMap[tile.type].img = map.tileMap[tile.type].imgSwitch;
-									// disable button
-									map.tileMap[tile.type].type = "";
-								}else {
-									map.tiles.splice(i,1);
+								if(typeof map.tileMap[tile.type].target !== "undefined") {
+									// if exists, switch image; else remove tile
+									if(typeof map.tileMap[tile.type].imgSwitch !== "undefined") {
+										map.tileMap[tile.type].img = map.tileMap[tile.type].imgSwitch;
+										// disable button
+										map.tileMap[tile.type].type = "";
+									}else {
+										map.tiles.splice(i,1);
+									}
+									// disable all targets
+									for(let i = 0; i < map.tileMap[tile.type].target.length; i++) {
+										if(typeof map.tileMap[map.tileMap[tile.type].target[i]] !== "undefined") {
+											map.tileMap[map.tileMap[tile.type].target[i]].isSolid = false;
+											map.tileMap[map.tileMap[tile.type].target[i]].img = "clear";
+										}
+									}
+									// set player as jumping (effect + if they press a button to fall)
+									player.isJumping = true;
 								}
 								break;
 							case "door":
@@ -882,6 +895,7 @@ function renderTitle(img, isWin) {
 		}
 		document.getElementById("back").className = "hidden";
 		document.getElementById("gameover").className = "hidden";
+		document.getElementById("scoreboard").className = "hidden";
 	}else if (typeof isWin !== "undefined") {
 		ctx.fillStyle = "#FFF";
 		ctx.font = "14px Verdana";
@@ -896,4 +910,16 @@ function renderTitle(img, isWin) {
 function renderMainTitle() {
 	renderTitle("title");
 	loopMusic(music_tracks["title"]);
+}
+
+function renderScoreboard() {
+	if(typeof ctx.fillRect !== "undefined") {
+		ctx.fillStyle = "#000";
+		ctx.fillRect(0, 0, canvas.width, canvas.height);
+	}
+	document.getElementById("title").className = 'hidden';
+	document.getElementById("scoreboard").className = '';
+	document.getElementById("back").className = '';
+	//TODO: remove
+	document.getElementById("start").className = "hidden";
 }

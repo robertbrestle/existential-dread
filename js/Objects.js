@@ -183,7 +183,7 @@ var player = {
 	statMax: 1000,
 	health: 1000,
 	stamina: 1000,
-	sprintJump: 100,
+	sprintJumpStaminaCost: 200,
 	isExhausted: false,
 	exhaustedTicks: 6,
 	exhaustedTicksMax: 6,

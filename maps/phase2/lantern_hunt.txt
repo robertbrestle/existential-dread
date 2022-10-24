@@ -1,0 +1,87 @@
+z={"img":"subway_border"}
+1={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":false,"hasGlow":true,"type":"lantern","img":"lantern_1"}
+2={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":false,"hasGlow":true,"type":"lantern","img":"lantern_2"}
+3={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":false,"hasGlow":true,"type":"lantern","img":"lantern_3"}
+4={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":false,"hasGlow":true,"type":"lantern","img":"lantern_4"}
+5={"x":0,"y":0,"sizeX":32,"sizeY":32,"isSolid":false,"hasGlow":true,"type":"lantern","img":"lantern_5"}
+#={"isSolid":false,"type":"door","img":"red_door"}
+~={"isSolid":false,"hasGlow":true,"type":"battery","img":"battery"}
+T={"sizeX":32,"sizeY":16,"offsetX":0,"offsetY":16,"isSolid":false,"type":"jump","img":"trampoline"}
+H={"sizeX":32,"sizeY":32,"offsetX":0,"offsetY":0,"isSolid":false,"type":"","img":"subway_border"}
+x={"isSolid":false,"img":"clear"}
+a={"isSolid":false,"type":"remove","target":["A"],"img":"button_off"}
+A={"sizeX":32,"sizeY":32,"isSolid":true,"img":"subway_border_cracked"}
+b={"isSolid":false,"type":"remove","target":["B"],"img":"button_off","imgSwitch":"button_on"}
+B={"sizeX":32,"sizeY":32,"isSolid":true,"img":"subway_border_cracked"}
+c={"isSolid":false,"type":"remove","target":["C"],"img":"button_off","imgSwitch":"button_on"}
+C={"sizeX":32,"sizeY":32,"isSolid":true,"img":"subway_border_cracked"}
+d={"isSolid":false,"type":"remove","target":["D"],"img":"button_off","imgSwitch":"button_on"}
+D={"sizeX":32,"sizeY":32,"isSolid":true,"img":"subway_border_cracked"}
+e={"isSolid":false,"type":"remove","target":["E"],"img":"button_off","imgSwitch":"button_on"}
+E={"sizeX":32,"sizeY":32,"isSolid":true,"img":"subway_border_cracked"}
+MAP={"width":128,"height":64,"nextMap":"maps/phase2/pits_of_despair.txt","music":"fear_rising_reversed","condType":"lantern","bgColor":"#1c1c1c","cameraX":2200,"cameraY":0,"batteryDrain":0,"overlayAlpha":0.4}
+START
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+z              z                              z              zz        E D C B A                                              zz
+z             z                         2     z              zz        E D C B A                                               z
+z            z                                z S    1   a   zz #      E D C B A  b                                         5  z
+z            z                                zzzzzzzzAAAAAAAzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzHHH                           z
+z     zz     z                 T               zzzzzzz       zzzzzzz                                                           z
+z     zz    zz          TT     z                zzzzzz       zzzzzz                                                            z
+zz    zz     z          zz                       zzzzz       zzzzz     zzzzzzzzzzzzzzzzzzzzzzzzzzHHHzz                         z
+zz    zz     z          zz              T           zz       zzzz                                                              z
+z     zz     zzz        zz              z           zz       zzz                                                    zzzz    T  z
+z     zz     z          zz                          zz       zzzzzzzzzzzzzzzzzzzzzz                                         z  z
+z      z     z         zzz        T                 zz       zz                                                                z
+z      z     z         zzz        z                 zz       zz  ~           zzzzz                                             z
+z     zz     z          zz                          zz       zz  z                                                             z
+z     zz     zz         zz                          zz       zz                        T      T      T      T     T      T     z
+z     zz     z          zz   T             T     e  zz       zzT                       z      z      z      z     z      z     z
+z     zz     z          zz   z             zzzzzzzzzzz       zzz                                                               z
+z      zz               zz                          zz       zz          T                                                     z
+z      z                zz                          zz       zz          z                                                     z
+z     z        zzzz      z                       z  zz       zz                                                             T  z
+z                         z                     z   zz       zz    T                                                        z  z
+z                          z         ~         z    zz       zz    z                                                           z
+z                           z                 z     zz       zz                          zzzz                     zzzz         z
+z                            z               z      zz       zz                        zzzz                     zzzz           z
+zz                            H             z       zz       zz                      zzzz                     zzzz       T     z
+z                              z           z        zz       zz                    zzzz                     zzzz         z     z
+z                               z    T    z         zz       zz                  zzzz                     zzzz                 z
+z            TT  TT              zzzzzzzzz          zz       zz                zzzz                     zzzz                   z
+z            zz  zz                                 zz       zz              zzzz                     zzzz                     z
+zzz                                                 zz       zz            zzzz            ~        zzzz              T        z
+z              TT  TT                               zz       zz          zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+z              zz  zz                                                  zzzz                                                    z
+z                                                                    zzzz                         zz                      HH   z
+z                                                                  zzzz         zz     4                      ~                z
+z     zzHHHHzzzzzzzzzzzzzzzz    zz     zzzzzzzzzzzzzzz        zzzzzz                  zz                      zz               z
+z     z                                            zz         zz          zz                      zz                      zz   z
+z     z                                            zz         zz                zz                      zz                     z
+z     z                             T             ~zz         zz    Hz                Hz    HH                zz    zH         z
+z     z                           zzzzz           zzz         zz          zz                      zz                      zz   z
+z     z          zzz               zzz             zz         zz                zz                      HH                     z
+z     z                             z              zz         zz    zz                zz    HH                zz    zz         z
+z     z                   T                        zz         zz          zz                      zz                      zz   z
+z     z                  zzz                       zz         zz                zz                      zz                     z
+z     z   T               z                  zzHHHzzz         zz    zz                zz    HH    ~           zz    zz         z
+z     zzzzzzz                                     zzz         zz          zz                      zz                      HH   z
+z     zzzzz                                        zz         zz                HH                      zz                     z
+z     z               T                            zz         zz    zz                zz    HH                zz    zz         z
+z     z              zzz            ~              zz         zz          zz                      zz                      zz   z
+z     z               z            zzz             zz         zz                zz                      zz           c         z
+z     z                             z              zz         zz    zz                zz    HH                HH    zz         z
+z     z                                        zzzzzz         zz          zz                      zz                      zz   z
+z     z           T                               zzz         zz                zz                      zz                     z
+z     z          zzz                    T          zz         zz    HH     ~          zz    HH                zz    zz         z
+z     z           z                    zzz         zz         zz          zz                      zz                      zz   z
+z  3  z                                 z          zz         zz                zz                      zz                     z
+z     z                                            zz         zz    zz                zz    HH                zz    zz         z
+z     z       T                                    zz         zz          zz                      HH                      zH   z
+z     z      zzz                                   zz         zz                zz                      zz                     z
+z     z       z              T                     zz         zz    zz                      HH                      zz         z
+z     zzzzzzzzzzzzzzzzzzzz   z   zzzzzzzzzzzzzzzzzzzz         zz          zz                      zz                      zz   z
+z     z      DD                                               zz                                                               z
+z     z      DD                                                     zz                                                         z
+z         d  DD                                                                                                                z
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz

@@ -1,12 +1,26 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.4] - 2022-10-23
+### Added
+- Phase II new levels
+  - `lantern_hunt`
+
+### Changed
+- Added support for multiple targets on `remove` tiles
+- Minor Phase II map adjustments (all maps)
+
+### Fixed
+- Stamina no longer drains when holding sprint while jumping
+
 ## [1.0.3] - 2022-10-20
 ### Added
 - New soundtrack `fear_rising_reversed`
 
 ### Changed
-- Slight modifications `tutorial` and `lantern_placeholder` maps
+- Minor Phase II map adjustments
+  - `tutorial`
+  - `lantern_placeholder`
 
 ### Fixed
 - Up and Down arrows will no longer scroll the page
