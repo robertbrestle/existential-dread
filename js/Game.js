@@ -895,7 +895,9 @@ function renderTitle(img, isWin) {
 		}
 		document.getElementById("back").className = "hidden";
 		document.getElementById("gameover").className = "hidden";
-		document.getElementById("scoreboard").className = "hidden";
+		if(document.getElementById("scoreboard") != null) {
+			document.getElementById("scoreboard").className = "hidden";
+		}
 	}else if (typeof isWin !== "undefined") {
 		ctx.fillStyle = "#FFF";
 		ctx.font = "14px Verdana";

@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.4.1] - 2022-10-23
+### Fixed
+- Music not playing on the title screen
+
 ## [1.0.4] - 2022-10-23
 ### Added
 - Phase II new levels
